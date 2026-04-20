@@ -1,0 +1,193 @@
+{
+    "dns": {
+        "hosts": {
+            "cloudflare-dns.com": "1.1.1.1",
+            "dns.google": "8.8.8.8"
+        },
+        "queryStrategy": "UseIPv4",
+        "servers": [
+            "https://cloudflare-dns.com/dns-query",
+            {
+                "address": "https://cloudflare-dns.com/dns-query",
+                "domains": [
+                ]
+            },
+            {
+                "address": "https://dns.google/dns-query",
+                "domains": [
+                ]
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http",
+            "settings": {
+                "userLevel": 8
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true
+            },
+            "tag": "http"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 11111,
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "127.0.0.1"
+            },
+            "tag": "metrics_in"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
+    },
+    "meta": null,
+    "metrics": {
+        "tag": "metrics_out"
+    },
+    "outbounds": [
+        {
+            "mux": {
+                "concurrency": -1,
+                "enabled": false,
+                "xudpConcurrency": 8,
+                "xudpProxyUDP443": ""
+            },
+            "protocol": "hysteria",
+            "settings": {
+                "address": "103.231.73.181",
+                "port": 444,
+                "version": 2
+            },
+            "streamSettings": {
+                "finalmask": {
+                    "udp": [
+                        {
+                            "settings": {
+                                "password": "cry_me_a_r1ver_2026"
+                            },
+                            "type": "salamander"
+                        }
+                    ]
+                },
+                "hysteriaSettings": {
+                    "auth": "strong-secret-pass-777",
+                    "version": 2
+                },
+                "network": "hysteria",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": true,
+                    "alpn": [
+                        "h3"
+                    ],
+                    "serverName": "www.microsoft.com",
+                    "show": false
+                }
+            },
+            "tag": "proxy"
+        },
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIP"
+            },
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                "response": {
+                    "type": "http"
+                }
+            },
+            "tag": "block"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "0": {
+                "statsUserDownlink": true,
+                "statsUserUplink": true
+            },
+            "8": {
+                "connIdle": 300,
+                "downlinkOnly": 1,
+                "handshake": 4,
+                "uplinkOnly": 1
+            }
+        },
+        "system": {
+            "statsInboundDownlink": true,
+            "statsInboundUplink": true,
+            "statsOutboundDownlink": true,
+            "statsOutboundUplink": true
+        }
+    },
+    "remarks": "🇮🇩 Индонезия [Обход] | ",
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "ip": [
+                    "1.1.1.1"
+                ],
+                "outboundTag": "proxy",
+                "port": 443,
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "8.8.8.8"
+                ],
+                "outboundTag": "direct",
+                "port": 443,
+                "type": "field"
+            },
+            {
+                "inboundTag": [
+                    "metrics_in"
+                ],
+                "outboundTag": "metrics_out",
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "geoip:RU"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            }
+        ]
+    },
+    "stats": {
+    }
+}
