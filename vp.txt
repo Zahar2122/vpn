@@ -7,7 +7,7 @@
       "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/2.txt"
     },
     {
-      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/main/config3.txt"
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/3.txt"
     }
   ]
 }
