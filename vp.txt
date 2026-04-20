@@ -1,1 +1,13 @@
-Q2hlbGJhc1ZQTg0Kdmxlc3M6Ly8wNTc1MTdkZi0wY2NmLTA3ZDAtYWVjZi1lODRhMmY3Nzk4NWJAY2RuLmRlcGxveS1hc3N1cmUucnU6NDQzP3R5cGU9d3Mmc2VjdXJpdHk9dGxzJmVuY3J5cHRpb249bm9uZSZzbmk9Y2RuLmRlcGxveS1hc3N1cmUucnUmYWxwbj1oMixodHRwLzEuMSZmcD1jaHJvbWUmcGF0aD0vLyZob3N0PWNkbi5kZXBsb3ktYXNzdXJlLnJ1I/Cfh7fwn4ehLdCg0L7RgdGB0LjRjy3QntCx0YXQvtC0LSjQn9C10YDQtdGB0L7QsdGA0LDQvdC+KQ0KaHlzdGVyaWEyOi8vc3Ryb25nLXNlY3JldC1wYXNzLTc3N0AxMDMuMjMxLjczLjE4MTo0NDQ/c25pPXd3dy5taWNyb3NvZnQuY29tJmluc2VjdXJlPTEmYWxwbj1oMyPCt9Cw0YDRg9Cx0LDQudGC0LXQvdC40Lkg0JjQvdC00L7QvdC10LfQuNGPINC+0LHRhdC+0LQNCmh5c3RlcmlhMjovL3JzdG5ubDo3bHRaQm10YTRhaExlblRJb3l3QnkzUjFaMVBWN1pHZkBufmVhbGlzdGljLm5uLWZvdG8ucnU6ODkzMj9zbmk9bnJlYWxpc3RpYy5ubi1mb3RvLnJ1Jmluc2VjdXJlPTEmYWxwbj1oMyPCt9Cw0YDRg9Cx0LDQudGC0LXQvdC40Lkg0KDQvtGB0YHQuNGPINC+0LHRhdC+0LQ=
+{
+  "configs": [
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/main/config1.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/main/config2.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/main/config3.txt"
+    }
+  ]
+}
