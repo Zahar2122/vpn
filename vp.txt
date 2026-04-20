@@ -1,7 +1,7 @@
 {
   "configs": [
     {
-      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/main/config1.txt"
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/1.txt"
     },
     {
       "url": "https://raw.githubusercontent.com/Zahar2122/vpn/main/config2.txt"
