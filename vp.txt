@@ -1,5 +1,21 @@
-https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/1.txt
-https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/2.txt
-https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/3.txt
-https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/4.txt
-https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/5.txt
+{
+  "configs": [
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/1.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/2.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/3.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/4.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Zahar2122/vpn/refs/heads/main/5.txt"
+    }
+  ]
+}
+
+
